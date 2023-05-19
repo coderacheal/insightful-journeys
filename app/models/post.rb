@@ -9,15 +9,10 @@ class Post < ApplicationRecord
     comments.order(created_at: :desc).limit(5)
   end
 
-  # Updates the comments counter for a post
+  # Updates the post counter for a post
 
-  def update_comments_count
-    update(comments_counter: comments.count)
+  def update_posts_count
+    author.increment!(:posts_counter)
   end
 
-  # Updates the likes counter for a post
-
-  def update_likes_count
-    update(likes_counter: likes.count)
-  end
 end
