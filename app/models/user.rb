@@ -8,7 +8,16 @@ class User < ApplicationRecord
     has_many :likes, foreign_key: :author_id
     has_many :comments, foreign_key: :author_id
 
+    after_save :update_post_counter
+
     def return_top_3
-        Post.order(created_at: :desc).limit(3)
+        posts.order(created_at: :desc).limit(3)
     end
+
+    private
+
+    def update_post_counter
+        update(posts_counter: posts_counter.count)
+    end
+    
 end
