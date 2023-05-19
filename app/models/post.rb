@@ -9,7 +9,6 @@ class Post < ApplicationRecord
     comments.order(created_at: :desc).limit(5)
   end
 
-
   # Updates the comments counter for a post
 
   def update_comments_count
