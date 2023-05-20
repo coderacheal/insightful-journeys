@@ -1,6 +1,5 @@
 require 'rails_helper'
 
-
 RSpec.describe Comment, type: :model do
   comment = Comment.new(author_id: 112, post_id: 1, text: 'I love waakye')
 
@@ -17,7 +16,7 @@ RSpec.describe Comment, type: :model do
   end
 
   it 'checks counts the comment made on a post' do
-    person = User.create(name: 'Racheal', photo: 'my photo', bio: 'Cottage core', posts_counter: 1)
+    User.create(name: 'Racheal', photo: 'my photo', bio: 'Cottage core', posts_counter: 1)
     post = Post.create(author_id: 1, title: 'Rain', text: 'Today is classic', comments_counter: 1, likes_counter: 1)
     comment = Comment.create(author_id: 1, post_id: post.id, text: 'I know right')
 

@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   before :all do
     @person = User.create(name: 'Racheal', photo: 'a photo of me',
-                        bio: 'I am a software engineer')
+                          bio: 'I am a software engineer')
   end
 
   describe 'validations' do
@@ -16,7 +16,6 @@ RSpec.describe User, type: :model do
       @person.posts_counter = '5'
       expect(@person).to_not be_valid
     end
-
   end
 
   describe 'associations' do
@@ -32,5 +31,4 @@ RSpec.describe User, type: :model do
       expect(@person.likes).to eq([])
     end
   end
-
 end
