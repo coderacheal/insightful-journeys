@@ -3,19 +3,17 @@ class User < ApplicationRecord
   # A user can like many posts
   # A user can make many comments
 
-  has_many :posts, foreign_key: :author_id
-  has_many :likes, foreign_key: :author_id
-  has_many :comments, foreign_key: :author_id
+  has_many :posts, foreign_key: :author_id, dependent: :destroy
+  has_many :comments, foreign_key: :author_id, dependent: :destroy
+  has_many :likes, foreign_key: :author_id, dependent: :destroy
 
-  after_save :update_post_counter
+  validates :name, presence: true
+
+  validates :posts_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+
 
   def return_top_three
     posts.order(created_at: :desc).limit(3)
   end
 
-  private
-
-  def update_post_counter
-    update(posts_counter: posts_counter.count)
-  end
 end
