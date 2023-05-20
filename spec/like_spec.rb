@@ -18,6 +18,5 @@ RSpec.describe Like, type: :model do
 
     post.likes_counter = 2
     post.save
-    # expect(like.update_likes_counter).to eq(2)
   end
 end

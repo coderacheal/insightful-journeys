@@ -16,6 +16,11 @@ RSpec.describe User, type: :model do
       @person.posts_counter = '5'
       expect(@person).to_not be_valid
     end
+
+    it 'should have posts > 0' do
+      @person.posts_counter = -1
+      expect(subject).to_not be_valid
+    end
   end
 
   describe 'associations' do
@@ -29,6 +34,15 @@ RSpec.describe User, type: :model do
 
     it 'should have many likes' do
       expect(@person.likes).to eq([])
+    end
+  end
+
+  describe 'recent posts by user' do
+    it 'should return the 3 most recent posts' do
+      5.times do |i|
+        Post.create(author: @person, title: "Post #{i}", text: "Post #{i} body")
+      end
+      expect(@person.return_top_three).to eq(@person.posts.order(created_at: :desc).limit(3))
     end
   end
 end
