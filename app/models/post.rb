@@ -17,7 +17,6 @@ class Post < ApplicationRecord
   validates :likes_counter, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
   # Updates the post counter for a post
-
   private
 
   def update_posts_count
