@@ -1,10 +1,9 @@
 class PostsController < ApplicationController
 
-    def show_a_users_post
-        @user = 
+    def index 
     end
 
-    def show_specific_user_post
+    def post
     end
     
 end
