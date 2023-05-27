@@ -1,0 +1,53 @@
+.each-user {
+  display: grid;
+  grid-template-columns:  2fr 6fr;
+  gap: 40px;
+  width: 70%;
+  margin: auto;
+  height: 150px;
+  margin-top: 30px;
+}
+
+.user-image {
+  border: 2px solid gray;
+  
+}
+
+.user-activity {
+  border: 2px solid gray;
+}
+
+.bio-div {
+  width: 70%;
+  border: 2px solid gray;
+  margin: auto;
+  height: 100px;
+  margin-top: 30px;
+}
+
+.posts-div {
+  /* display: flex; */
+  /* flex-direction: column; */
+  width: 70%;
+  /* border: 2px solid gray; */
+  margin: auto;
+  margin-top: 30px;
+}
+
+.individual-user-post {
+  /* display: flex; */
+  /* flex-direction: column; */
+  border: 2px solid gray;
+  margin: auto;
+  margin-top: 30px;
+}
+
+p {
+  font-size: 20px;
+}
+
+.comments-likes-div {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+}
