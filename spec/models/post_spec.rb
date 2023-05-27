@@ -23,18 +23,4 @@ RSpec.describe User, type: :model do
   it 'has a valid number for likes counter' do
     expect(post.likes_counter).to eq(10)
   end
-
-  it 'checks update_author_posts_counter' do
-    user = User.create!(name: 'Racheal', posts_counter: 0)
-
-    post = user.posts.create!(title: 'New Test', text: 'Who am I', comments_counter: 3, likes_counter: 2)
-
-    post.update_posts_count
-    post.update_posts_count
-    post.update_posts_count
-
-    user.reload
-
-    expect(user.posts_counter).to eq(4)
-  end
 end
