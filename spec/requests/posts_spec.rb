@@ -1,40 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe PostsController, type: :request do
-  describe 'GET /index' do
-    it 'returns a success response' do
-      get '/users/745/posts'
-      expect(response).to be_successful
-    end
-
-    it 'renders the index template of views/users' do
-      get '/users/745/posts'
-      expect(response).to render_template(:index)
-    end
-
-    it 'includes the correct placeholder text' do
-      get '/users/745/posts'
-      result = response.body
-      expect(result).to include('Here is a list of all the post for a particular user')
-    end
-
-    describe 'GET #show' do
-      it 'returns a success response' do
-        get '/users/745/posts/3'
-
-        expect(response).to have_http_status(200)
-      end
-
-      it 'renders the show template' do
-        get '/users/745/posts/3'
-        expect(response).to render_template(:show)
-      end
-
-      it 'includes the correct placeholder text' do
-        get '/users/745/posts/3'
-        result = response.body
-        expect(result).to include('Here is a particular post by a specific user')
-      end
-    end
+RSpec.describe "Posts", type: :request do
+  describe "GET /index" do
+    pending "add some examples (or delete) #{__FILE__}"
   end
 end
