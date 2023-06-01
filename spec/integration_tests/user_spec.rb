@@ -31,12 +31,23 @@ RSpec.describe User, type: :system do
         
     end
     
-    describe 'specific user show page' do
+   describe 'specific user show page' do
       it 'should check for user photo' do
         visit user_path(@user.id)
         expect(page).to have_css('div', text: @user.photo)
       end
-     
+      it 'should check for user name' do
+        visit user_path(@user.id)
+        expect(page).to have_css('h1', text: @user.name)
+      end
+      it 'should check for the user\'s image' do
+        visit user_path(@user.id)
+        expect(page).to have_content(@user.photo)
+      end
+      it 'should check for number of post' do
+        visit user_path(@user.id)
+        expect(page).to have_content('Number of posts: 4')
+      end
       it 'should check for users bio' do
         visit user_path(@user.id)
         expect(page).to have_content(@user.bio)
@@ -49,8 +60,12 @@ RSpec.describe User, type: :system do
         visit user_path(@user.id)
         expect(page).to have_link('All Posts')
       end
+      # it 'should check for the user\'s image' do
+      #   visit user_path(@user.id)
+      #   sleep(3)
+      #   expect(page).to have_content(@user.name)
+      # end
     end
-
 
     
 end
