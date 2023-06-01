@@ -20,3 +20,4 @@ RSpec.describe Like, type: :model do
     post.save
   end
 end
+

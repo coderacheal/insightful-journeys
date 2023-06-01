@@ -27,11 +27,10 @@ RSpec.describe User, type: :model do
   it 'checks update_author_posts_counter' do
     user = User.create!(name: 'Racheal', posts_counter: 0)
 
-    post = user.posts.create!(title: 'New Test', text: 'Who am I', comments_counter: 3, likes_counter: 2)
-
-    post.update_posts_count
-    post.update_posts_count
-    post.update_posts_count
+    post1 = user.posts.create!(title: 'New Test', text: 'Who am I', comments_counter: 3, likes_counter: 2)
+    post2 = user.posts.create!(title: 'New Test', text: 'Who am I', comments_counter: 3, likes_counter: 2)
+    post3 = user.posts.create!(title: 'New Test', text: 'Who am I', comments_counter: 3, likes_counter: 2)
+    post4 = user.posts.create!(title: 'New Test', text: 'Who am I', comments_counter: 3, likes_counter: 2)
 
     user.reload
 
