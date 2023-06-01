@@ -9,7 +9,8 @@ Rails.application.routes.draw do
     end
   end
 
-  get '/users', to: 'users#index', as: 'user_index'
+  # get '/users', to: 'users#index', as: 'user_index'
+  get '/users', to: 'users#show', as: 'user_show'
 
   # Defines the root path route ("/")
   # root "articles#index"
