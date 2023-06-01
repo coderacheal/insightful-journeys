@@ -30,6 +30,26 @@ RSpec.describe User, type: :system do
         end
         
     end
+    
+    describe 'specific user show page' do
+      it 'should check for user photo' do
+        visit user_path(@user.id)
+        expect(page).to have_css('div', text: @user.photo)
+      end
+     
+      it 'should check for users bio' do
+        visit user_path(@user.id)
+        expect(page).to have_content(@user.bio)
+      end
+      it 'should check for users bio' do
+        visit user_path(@user.id)
+        expect(page).to have_css('p', text:'Integration test with Capybara and Selenium web drivers')
+      end
+      it 'should check for users bio' do
+        visit user_path(@user.id)
+        expect(page).to have_link('All Posts')
+      end
+    end
 
 
     
