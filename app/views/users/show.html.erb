@@ -1,6 +1,6 @@
 <section>
     <div class='each-user'>
-        <div class='user-image'> <%= @user.photo %></div>
+        <div class='user-image'> <%= @user.photo %> </div>
         <div class='user-activity'>
             <h1><%= @user.name %></h1>
             <p>Number of posts: <%= @user.posts_counter %></p>
@@ -14,7 +14,7 @@
     <div class='posts-div'>
         <% @recent_posts.each_with_index do |post, index| %>
             <div class='individual-user-post'>
-                <h1>Post #<%= index+1 %></h1>
+                <h1><%= link_to "Post #{index+1}", user_post_path(@user, post) %></h1>
                 <p> <%= post.text %></p>
                 <p>
                     Comments: <%= post.comments_counter %>
@@ -25,9 +25,6 @@
         <% end %>
     </div>
     <br>
-    <button class="see-all-posts">
-      <%= link_to "See all posts", user_posts_path(@user) %>
-    </button>
-    
+    <button class="see-all-posts"><%= link_to "All Posts", user_posts_path(@user) %></button> 
 </section>
 
