@@ -133,7 +133,7 @@ Example command:
 🕵🏽‍♀️ **Racheal Appiah-kubi**
 
 - GitHub: [GitHub Profile](https://github.com/coderacheal)
-- Twitter: [Twitter Handle](https://twitter.com/rachael_kubi)
+- Twitter: [Twitter Handle](https://twitter.com/racheal_kubi)
 - LinkedIn: [LinkedIn Profile](https://www.linkedin.com/in/racheal-appiah-kubi/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -142,11 +142,7 @@ Example command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Project 2: Controllers specs.**
-- **Project 3: Creating a data model.**
-- **Project 4: Setup and controllers.**
-- **Project 5: Controllers specs.**
-- **Project 6: Views.**
+
 - **Project 7: Forms.**
 - **Project 8: Integration specs for Views and fixing n+1 problems.**
 - **Project 9: Add Devise.**
