@@ -1,6 +1,6 @@
 .each-user {
   display: grid;
-  grid-template-columns: 2fr 6fr;
+  grid-template-columns: 1fr 6fr;
   gap: 40px;
   width: 70%;
   margin: auto;
@@ -8,8 +8,10 @@
   margin-top: 30px;
 }
 
-.user-image {
+.user-image img {
   border: 2px solid gray;
+  height: 150px;
+  width: 150px;
 }
 
 .user-activity {
@@ -25,12 +27,7 @@
 }
 
 .posts-div {
-  /* display: flex; */
-
-  /* flex-direction: column; */
   width: 70%;
-
-  /* border: 2px solid gray; */
   margin: auto;
   margin-top: 30px;
 }
