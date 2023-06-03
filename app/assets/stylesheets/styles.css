@@ -1,6 +1,6 @@
 .each-user {
   display: grid;
-  grid-template-columns: 2fr 6fr;
+  grid-template-columns: 1fr 6fr;
   gap: 40px;
   width: 70%;
   margin: auto;
@@ -8,8 +8,10 @@
   margin-top: 30px;
 }
 
-.user-image {
+.user-image img {
   border: 2px solid gray;
+  height: 150px;
+  width: 150px;
 }
 
 .user-activity {
@@ -25,12 +27,7 @@
 }
 
 .posts-div {
-  /* display: flex; */
-
-  /* flex-direction: column; */
   width: 70%;
-
-  /* border: 2px solid gray; */
   margin: auto;
   margin-top: 30px;
 }
@@ -121,4 +118,72 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.field {
+  width: 100%;
+  margin: auto;
+  padding: 5px 10px;
+}
+
+.form-inputs-registration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  padding: 15px 10px;
+  margin: auto;
+  margin-top: 20px;
+  border: none;
+  border-bottom: 2px solid rgb(163, 163, 163);
+  outline: none;
+}
+
+.form-inputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  padding: 15px 10px;
+  margin: auto;
+  margin-top: 40px;
+  border: none;
+  border-bottom: 2px solid rgb(163, 163, 163);
+}
+
+.session-registration,
+.password-length {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  padding: 15px 10px;
+  margin: auto;
+}
+
+.btn {
+  width: 60%;
+  margin: auto;
+  color: white;
+  background-color: black;
+  margin-top: 40px;
+}
+
+.password-length {
+  justify-content: left;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.actions {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 60%;
+  padding: 15px 10px;
+  margin: auto;
+  margin-top: 40px;
+  border: none;
+  column-gap: 30px;
+  font-size: 22px;
 }
