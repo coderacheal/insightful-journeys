@@ -12,7 +12,10 @@ Rails.application.routes.draw do
     end
   end
 
-  
+  #Adding API
+  namespace :api do
+    get 'users', to: 'users#index'
+  end
 
   # Defines the root path route ("/")
   root "users#index"
