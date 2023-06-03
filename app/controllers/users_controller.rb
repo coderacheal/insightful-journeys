@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   #   @recent_posts = @user.return_top_three
   # end
   def show
-    if params[:id] == "sign_out"
+    if params[:id] == 'sign_out'
       sign_out(current_user)
       redirect_to root_path
     else
@@ -16,5 +16,4 @@ class UsersController < ApplicationController
       @recent_posts = @user.return_top_three
     end
   end
-  
 end
