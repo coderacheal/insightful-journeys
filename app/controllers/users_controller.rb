@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   def index
     @all_users = User.all
   end
-  
+
   def show
     if params[:id] == 'sign_out'
       sign_out(current_user)
@@ -14,5 +14,4 @@ class UsersController < ApplicationController
       @recent_posts = @user.return_top_three
     end
   end
-  
 end
